@@ -11,34 +11,34 @@ CREATE TABLE products (
 );
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 1, chair, furniture, 200, 3);
+VALUES ( 1, "chair", "furniture", 200, 3);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 2, couch, furniture, 600, 4);
+VALUES ( 2, "couch", "furniture", 600, 4);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 3, mustard, food, 10, 100);
+VALUES ( 3, "mustard", "food", 10, 100);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 4, butter, food, 2, 88);
+VALUES ( 4, "butter", "food", 2, 88);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 5, phone, technology, 899, 3);
+VALUES ( 5, "phone", "technology", 899, 3);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 6, fur, fabric, 19, 8);
+VALUES ( 6, "fur", "fabric", 19, 8);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 7, frisbee, sports, 12, 9);
+VALUES ( 7, "frisbee", "sports", 12, 9);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 8, ball, sports, 8, 20);
+VALUES ( 8, "ball", "sports", 8, 20);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 9, laptop, technology, 399, 51);
+VALUES ( 9, "laptop", "technology", 399, 51);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUES ( 10, headphones, technology, 60, 5);
+VALUES ( 10, "headphones", "technology", 60, 5);
 
 
 
