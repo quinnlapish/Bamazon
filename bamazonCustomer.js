@@ -45,21 +45,43 @@ function runSearch(){
          .then(function(answer){
              
                var itemnumber= answer.ID;
-               var amountnumber= answer.amount;
+               var amountnumber= parseInt(answer.amount);
 
                console.log(itemnumber);
                console.log(amountnumber);
 
-               if (amountnumber <= res[itemnumber - 1].stock_quanity) {
-                connection.query("UPDATE products SET ? WHERE ?", [{
-                    stock_quantity: res[itemnumber -1].stock_quanity - amountnumber
-                
-                },
-                // id: res[prodcu]
-            ])
+               connection.query("SELECT * FROM products WHERE item_id =" + answer.ID, function(err, res){
+                if (err) throw err;
+                console.log(res[0].stock_quantity);
+                if (amountnumber < res[0].stock_quantity){
+                    
+                    var remainingstock=res[0].stock_quantity - amountnumber;
+                    console.log(remainingstock);
+                    connection.query(
+                        "UPDATE products SET ? WHERE ?",
+                        [
+                          {
+                            stock_quantity:remainingstock
+                          },
+                          {
+                            item_id: itemnumber
+                          }
+                        ],
+                        function(error) {
+                         console.log(error);
+                        }
+                      );
+                        
 
-               }
-            
+                }
+
+                else {
+
+                    console.log("WE dont have that!");
+                }
+                
+               })
+
          });
 
         
